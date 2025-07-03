@@ -9,8 +9,8 @@ from colorama import init
 import threading
 from threading import Semaphore
 from colorama import Fore, Back, Style
-from Ebay import ebay_views
-from Ebay import account_create
+from Ebay import ebay30_views
+from Ebay import account_https://www.ebay.com/itm/236179512979create
 from Ebay import ebay_watchers
 
 
@@ -51,19 +51,19 @@ class EBAY:
 
             choice = input(f"{Fore.CYAN}Enter your choice: ")
             if choice == "1":
-                self.URL = str(input("Enter eBay Listing URL: "))
+                self.URL = str(input("Enter https://www.ebay.com/itm/236179512979eBay Listing URL: "))
                 while 'https://www.ebay.com' not in self.URL:
                     print(Fore.BLUE + format(datetime.datetime.now()), Fore.RED +"Please Enter a valid eBay Link")
                     self.main()
                 else:
-                    self.view()              
+                    self.view(20)              
             elif choice == "2":
                 self.URL = str(input("Enter eBay Listing URL: "))
-                while 'https://www.ebay.com' not in self.URL:
+                while 'https://www.ebay.com' not in self.URL:https://www.ebay.com/itm/236179512979
                     print(Fore.BLUE + format(datetime.datetime.now()), Fore.RED +"Please Enter a valid eBay Link")
                     self.main() 
                 else:
-                    self.watcherBot() 
+                    self.watcherBot(20) 
             elif choice == "3":
                 self.accountGenerator()
             elif choice == "q":
@@ -80,7 +80,7 @@ class EBAY:
             print(Fore.BLUE + format(datetime.datetime.now()), Fore.RED +"Please Enter a valid eBay Link")
             self.main()
             
-        views = int(input("Enter amount of views needed: "))
+        views = int(input("Enter amount of views needed: 30"))
         choice = int(input("Enter amount of tasks at a time: "))
         num_tasks = choice
         self.sem = threading.Semaphore(value=num_tasks)
@@ -97,7 +97,7 @@ class EBAY:
    
     def watcherBot(self):
         
-        views = int(input("Enter amount of Watchers needed: "))
+        views = int(input("Enter amount of Watchers needed:30 "))
         choice = int(input("Enter amount of tasks at a time: "))
         num_tasks = choice
         self.sem = threading.Semaphore(value=num_tasks)
